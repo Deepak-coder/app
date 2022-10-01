@@ -1,0 +1,39 @@
+
+<div class="col-lg-6">
+    <h2>Register</h2><br>
+    <form>
+      <div class="form-group">
+        <label for="email">Name:</label>
+        <input type="email"  class="form-control" placeholder="Enter name" name="name"  required>
+        <!-- <small  style="color: red" *ngIf="email.touched && !email.valid">invalid email</small> -->
+      </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email"  class="form-control" placeholder="Enter email" name="email"  required>
+          <!-- <small  style="color: red" *ngIf="email.touched && !email.valid">invalid email</small> -->
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control"  placeholder="Enter password" minlength="10" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"  name="=password" required>
+          <!-- <small  style="color: red"  *ngIf="password.touched && !password.valid">invalid password</small> -->
+        </div>
+        <div class="form-group">
+            <label for="pwd">Re-enter Password:</label>
+            <input type="password" class="form-control"  placeholder="Re-enter password" minlength="10" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"  name="=password" required>
+            <!-- <small  style="color: red"  *ngIf="password.touched && !password.valid">invalid password</small> -->
+          </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div><br>
+            <p>Already have an account? <a style="cursor: pointer; color:cornflowerblue; " (click)="onSwitchMode()">login</a></p>
+            <!-- <p>{{isLoginMode? 'dont have an account?' : 'Already have an account?' }} <a style="cursor: pointer;" (click)="onSwitchMode()">{{isLoginMode? 'register':'login'}}</a>.</p> -->
+          </div>
+      </form>
+</div>
+
+

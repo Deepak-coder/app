@@ -1,0 +1,27 @@
+<div class="col-lg-6">
+    <h2>SignIn</h2><br>
+    <form #loginForm="ngForm" (ngSubmit)="signIn(loginForm.value)">
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" #email="ngModel" class="form-control" placeholder="Enter email" name="email" ngModel email required>
+          <small  style="color: red" *ngIf="email.touched && !email.valid">invalid email</small>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" #password="ngModel" class="form-control"  placeholder="Enter password" minlength="10" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"  name="password" ngModel required>{{password.value}}
+          <small  style="color: red"  *ngIf="password.touched && !password.valid">invalid password</small>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+        <div><br>
+            <p>dont have an account?<a style="cursor: pointer; color:cornflowerblue; " (click)="onSwitchMode()">Register</a></p>
+            <!-- <p>{{isLoginMode? 'dont have an account?' : 'Already have an account?' }} <a style="cursor: pointer;" (click)="onSwitchMode()">{{isLoginMode? 'register':'login'}}</a>.</p> -->
+          </div>
+      </form>
+</div>
+

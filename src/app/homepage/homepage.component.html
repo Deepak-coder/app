@@ -1,0 +1,30 @@
+<h2><p><strong>Rxjs Concepts</strong></p></h2><br>
+  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+
+<!-- <div class="card-deck" *ngFor="let rxjs of rxjss">
+    <div class="card" style="width: 18rem;" >
+      
+        
+        <div class="card-body" style="background-color:hsl(0, 8%, 75%) ;">
+          <h5 class="card-title">{{rxjs}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">See Example</a>
+        </div>
+      </div>
+</div> -->
+
+<div class="card-deck" >
+    <div *ngFor="let rxjs of rxjss">
+        <div class="card">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title">{{rxjs}}</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"><a class="btn btn-primary" routerLink="/pluck">See Example</a></small>
+            </div>
+          </div><hr><hr>&nbsp;
+    </div>
+  </div>
+

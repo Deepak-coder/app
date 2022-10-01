@@ -1,0 +1,35 @@
+<!-- <p> works!</p> -->
+
+
+<div class="col-lg-6" 
+style="background-color:rgb(231, 243, 243);
+border-radius: 12px;
+padding: 5px;">
+    
+    <div class="container">
+        <h2>nesting-reactive-forms</h2><br>
+        <form>
+            <div class="form-group">
+              <label for="email">Name<strong>:</strong></label>
+              <input type="email"  class="form-control" placeholder="Enter name" name="name"  required>
+              <!-- <small  style="color: red" *ngIf="email.touched && !email.valid">invalid email</small> -->
+            </div>
+              <div class="form-group">
+                <label for="email">Email address<strong>:</strong></label>
+                <input type="email"  class="form-control" placeholder="Enter email" name="email"  required>
+                <button type="button" class="btn btn-danger"><span class="glyphicon">&#xe020;</span></button>
+              </div>
+              <hr>
+              <button type="submit" class="btn btn-outline-success btn-sm btn-block"> + Add another form</button><br><br><br><br>
+             
+              <button type="submit" class="btn btn-outline-primary btn-block"><strong>Submit</strong></button>
+              <div><br>
+                  <!-- <p>Already have an account? <a style="cursor: pointer; color:cornflowerblue; ">login</a></p> -->
+                </div>
+            </form>
+    </div>
+    
+</div>
+
+
+
