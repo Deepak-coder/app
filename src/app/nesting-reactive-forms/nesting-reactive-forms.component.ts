@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-nesting-reactive-forms',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NestingReactiveFormsComponent implements OnInit {
 
+  value?:boolean;
+  value2?:boolean;
+  
   constructor() { }
 
   ngOnInit(): void {
